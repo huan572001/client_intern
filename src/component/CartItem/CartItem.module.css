@@ -1,0 +1,68 @@
+.CartItem {
+  display: flex;
+  padding: 20px 0;
+}
+
+.ImgCartItemOut {
+  flex: 0;
+}
+
+.ImgCartItemIn {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  background-color: #eee;
+  margin-right: 34px;
+}
+
+.ImgCartItemIn img {
+  display: block;
+  width: 140%;
+  transform: rotate(-28deg) translateY(-40px);
+  filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.2));
+}
+
+.CartRight {
+  flex: 1;
+}
+
+.CartName {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.Price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.ActionCart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.RemoveCart {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6c90e;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.RemoveCart img {
+  width: 16px;
+  height: 16px;
+}

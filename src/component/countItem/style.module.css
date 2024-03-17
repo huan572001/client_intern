@@ -1,0 +1,50 @@
+.Increment {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 100%;
+  background-color: #eee;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.QuantityProduct {
+  font-size: 14px;
+  margin: 0 8px;
+  width: 20px;
+  text-align: center;
+}
+
+.Reduce {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 100%;
+  background-color: #eee;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.CountProduct {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
