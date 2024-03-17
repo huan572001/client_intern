@@ -9,7 +9,7 @@ import { ProductAPI } from "./service/product";
 function App() {
   const [data, setData] = useState([]);
   const [dataCart, setDataCart] = useState([]);
-
+  const [price, setPrice] = useState({});
   const getProduct = async () => {
     try {
       const rq = await ProductAPI.getAllProduct();
@@ -22,11 +22,12 @@ function App() {
   };
   const totalMonney = () => {
     let total = 0;
-    dataCart.forEach((e) => {
+    Object.values(price).map((e) => {
       total += Number(e.price);
     });
-    return total;
+    return total.toFixed(2) || 0;
   };
+  totalMonney();
   useEffect(() => {
     getProduct();
   }, []);
@@ -69,6 +70,11 @@ function App() {
                   setDataCart((item) => {
                     return item.filter((item1) => item1.id !== e);
                   });
+                }}
+                setCountItem={(e) => {
+                  const tmp = { ...price };
+                  tmp[e.id] = e;
+                  setPrice(tmp);
                 }}
                 data={e}
                 key={e.id}

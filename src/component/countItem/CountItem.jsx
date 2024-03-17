@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./style.module.css";
 
 export const CountItem = (prop) => {
   const [count, setCount] = useState(1);
-
+  useEffect(() => {
+    prop.onChange(count);
+  }, []);
   return (
     <div className={style.CountProduct}>
       <div
         className={style.Increment}
         onClick={() => {
           setCount(count - 1);
-          prop.onChange(count + 1);
+          prop.onChange(count - 1);
         }}
       >
         -

@@ -15,10 +15,29 @@ export const CartItem = (prop) => {
         <div className={style.CartName}></div>
         <div className={style.Price}></div>
         <div className={style.ActionCart}>
-          <CountItem onChange={(e) => console.log(e)} />
+          <CountItem
+            onChange={(e) => {
+              if (e <= 0) {
+                prop.onChange(prop?.data.id);
+                prop.setCountItem({
+                  id: prop?.data?.id,
+                  price: 0,
+                });
+              } else {
+                prop.setCountItem({
+                  id: prop?.data?.id,
+                  price: Number(prop?.data?.price) * Number(e),
+                });
+              }
+            }}
+          />
           <div
             onClick={() => {
               prop.onChange(prop?.data.id);
+              prop.setCountItem({
+                id: prop?.data?.id,
+                price: 0,
+              });
             }}
             className={style.RemoveCart}
           >
