@@ -42,7 +42,7 @@
   font-weight: 700;
   margin: 16px 0;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   position: relative;
 }
 

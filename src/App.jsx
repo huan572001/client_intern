@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 import { Card } from "./component/Card";
 import { ProductItem } from "./component/ProductItem";
@@ -20,6 +19,13 @@ function App() {
     } catch (error) {
       setData(dataTest);
     }
+  };
+  const totalMonney = () => {
+    let total = 0;
+    dataCart.forEach((e) => {
+      total += Number(e.price);
+    });
+    return total;
   };
   useEffect(() => {
     getProduct();
@@ -48,7 +54,14 @@ function App() {
             );
           })}
         </Card>
-        <Card title={<div>3123131</div>}>
+        <Card
+          title={
+            <>
+              <div>Your cart</div>
+              <div>{totalMonney()}</div>
+            </>
+          }
+        >
           {dataCart?.map((e) => {
             return (
               <CartItem

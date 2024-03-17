@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { check, nike, trash } from "../../assets";
 import style from "./style.module.css";
-import { useEffect } from "react";
 
 export const CountItem = (prop) => {
   const [count, setCount] = useState(1);

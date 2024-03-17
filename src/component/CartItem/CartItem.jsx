@@ -1,4 +1,4 @@
-import { check, nike, trash } from "../../assets";
+import { trash } from "../../assets";
 import { CountItem } from "../countItem";
 import style from "./CartItem.module.css";
 
